@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -24,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupViews() {
-        lbl_date = findViewById(R.id.lbl_date);
-        lbl_time = findViewById(R.id.lbl_time);
+        lbl_date = ActivityCompat.requireViewById(this, R.id.lbl_date);
+        lbl_time = ActivityCompat.requireViewById(this,R.id.lbl_time);
         setDate();
         setTime();
     }
